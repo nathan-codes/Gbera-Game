@@ -3,6 +3,7 @@ const blueCube = $("#blue");
 const yellowCube = $("#yellow");
 const greenCube = $("#green");
 const redCube = $("#red");
+const startButton = $(".start-btn");
 
 
 //Game Audios
@@ -28,16 +29,26 @@ let level = 0;
 
 // Starting the Game based on Any key that is pressed.
 $(document).keypress(function () {
-    
+
     $("h1").text("Level " + level);
     newSequence();
 });
 
 $("#level-title2").on("click", function () {
-   
+
     $("h1").text("Level " + level);
-    newSequence();
+    startGameAudio.play();
+    startButton.addClass("display");
+    startButton.removeClass("no-display");
+
 });
+
+
+
+$(".start-btn").on("click", function () {
+    startButton.addClass("no-display");
+    newSequence();
+})
 
 
 
@@ -48,6 +59,8 @@ $(".btn").on("click", function (event) {
     checkAnswer(userSelectedColors.length - 1);
 
 })
+
+
 
 
 
@@ -64,6 +77,7 @@ function checkAnswer(currentlevel) {
             //5. Call nextSequence() after a 1000 millisecond delay.
             setTimeout(function () {
                 newSequence();
+
             }, 1000);
 
         }
@@ -100,18 +114,18 @@ function newSequence() {
     userSelectedColors = [];
 
     randomNumber = Math.floor(Math.random() * 4);
-    
+
     let randomColor = originalColors[randomNumber];
 
     $("#" + randomColor).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 
-    
-   
-        playSound(randomColor);
 
-        //Storing the new pattern 
-        newPattern.push(randomColor);  
-    
+
+    playSound(randomColor);
+
+    //Storing the new pattern 
+    newPattern.push(randomColor);
+
 
 
 

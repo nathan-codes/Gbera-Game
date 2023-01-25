@@ -6,19 +6,21 @@ body {
 
 
 
+
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;  
+  margin: 5%;
   color: #FEF2BF;
 }
 
-#level-title2{
+#level-title2 {
   font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
-    margin: 5%;
-    color: #FEF2BF;
-    display: none;
+  font-size: 3rem;
+  margin: 5%;
+  color: #FEF2BF;
+  display: none;
 }
 
 .container {
@@ -26,7 +28,7 @@ body {
   width: 30%;
   margin: auto;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 
 }
 
@@ -70,44 +72,78 @@ body {
 }
 
 
+/* Styling the Start Button */
+.start-btn {
+
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  font-weight: bold;
+  padding: 20px 30px;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 .2em gray;
+  cursor: pointer;
+  display: none;
+
+}
+
+.start-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: .2em;
+}
+
+
+
+.display {
+  display: inline-block;
+}
+
+.no-display {
+  display: none;
+}
 
 
 
 @media (max-width:600px) {
-  .btn{
+  .btn {
     width: 100px;
     height: 100px;
     margin: 1rem;
 
   }
 
-    #level-title{
-     display: none;
+  #level-title {
+    display: none;
 
   }
 
-  #level-title2{
+  #level-title2 {
 
     border: 2px solid rebeccapurple;
     border-radius: 20px;
     padding: 2rem 0;
-      margin: 1rem 0 2rem 0;
-        font-size: 1.2rem;
-        display: block;
-        line-height: 2;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    display: block;
+    line-height: 2;
   }
 
-    #level-title3 {
-      
-      font-family:'Courier New', Courier, monospace;
-      color: whitesmoke;
-          border: 2px solid rebeccapurple;
-            border-radius: 20px;
-            padding: 2rem 0;
-            margin: 1rem 0 2rem 0;
-            font-size: 1.2rem;
-            display: block;
-            line-height: 2;
-    }
-  
+  #level-title3 {
+    color: whitesmoke;
+    border: 2px solid rebeccapurple;
+    border-radius: 20px;
+    padding: 2rem 0;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    display: block;
+    line-height: 2;
+  }
+
 }
